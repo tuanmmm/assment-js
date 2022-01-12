@@ -1,17 +1,32 @@
 import Navigo from "navigo";
 import HomePage from "./papes/home";
 import AboutPage from "./papes/about";
-
-const router = new Navigo("/");
+import Header from "./components/header";
+import DetailNewsPage from "./papes/detailNews";
+import NewsPage from "./papes/news";
+import Sign from "./papes/sign";
+const router = new Navigo("/" , { linksSelector: "a" });
 const render = (content) => {
-    document.getElementById("app").innerHTML = content.print();
+    document.getElementById("header").innerHTML = Header.print();
+    document.getElementById("app").innerHTML = content;
 }
 router.on({
     "/": () => {
-        render(HomePage);
+        render(HomePage.print());
     },
     "/about": () => {
-        render(AboutPage);
+        render(AboutPage.print());
+    },
+    
+    "/news": () => {
+        render(NewsPage.print());
+    },
+    "/news/:id": ({ data }) => {
+        const { id } = data;
+        render(DetailNewsPage.print(id));
+    },
+    "/sign" : () => {
+        render(Sign.print());
     }
 });
 router.resolve();

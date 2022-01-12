@@ -1,5 +1,5 @@
 import Banner from "../components/banner";
-import NewsList from "../components/newList";
+import NewsList from "../components/newsList";
 
 const HomePage = {
     print() {

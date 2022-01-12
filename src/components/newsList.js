@@ -11,7 +11,7 @@ const NewsList = {
                     <a href="">
                         <img src="${post.img}" alt="" />
                     </a>
-                    <h3 class="my-3"><a href="#" class="text-xl font-semibold text-orange-500">${post.title}</a></h3>
+                    <h3 class="my-3"><a href="/news/${post.id}" class="text-xl font-semibold text-orange-500">${post.title}</a></h3>
                     <p>${post.desc}</p>
                 </div>
             `).join("")}
@@ -24,7 +24,7 @@ const NewsList = {
                     <a href="">
                         <img src="${post.img}" alt="" />
                     </a>
-                    <h3 class="my-3"><a href="#" class="text-xl font-semibold text-orange-500">${post.title}</a></h3>
+                    <h3 class="my-3"><a href="/news/${post.id}" class="text-xl font-semibold text-orange-500">${post.title}</a></h3>
                     <p>${post.desc}</p>
                 </div>
             `).join("")}
