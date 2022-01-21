@@ -1,7 +1,8 @@
-import data from "../../data";
-import HeaderAdmin from "../../components/headeradmin";
-const admin = {
-    print(){
+import axios from "axios";
+import HeaderAdmin from "../../../components/headeradmin";
+const AdminNewsPage = {
+  async  print(){
+      const {data} = await axios.get('https://5e79b4b817314d00161333da.mockapi.io/posts');
         return /* html */ `
         <div class="min-h-full">
         <div>
@@ -11,12 +12,12 @@ const admin = {
         <header class="bg-white shadow">
           <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
             <h1 class="text-3xl font-bold text-gray-900">
-              Dashboard
+              Quản lí bài viết
             </h1>
           </div>
         </header>
         <div class="my-[20px] ">
-            <button class=" font-sans p-1 rounded-[5px] bg-black text-white font-bold"><a href="/admin/news/addnews">Thêm mới</a></button>
+            <button class=" font-sans p-1 rounded-[5px] bg-black text-white font-bold"><a href="/admin/news/add">Thêm mới</a></button>
         </div>
         <main>
           <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
@@ -81,7 +82,6 @@ const admin = {
                 <a href="/admin/news/${post.id}/editnews" class="text-indigo-600 hover:text-indigo-900">Edit</a>
               </td>
             </tr>
-
             <!-- More people... -->
           </tbody>
           `).join("")}
@@ -96,9 +96,11 @@ const admin = {
           </div>
         </main>
       </div>
+
         `;
 
     
     },
+    
 };
-export default admin;
+export default AdminNewsPage;
