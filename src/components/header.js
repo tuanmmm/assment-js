@@ -10,7 +10,7 @@ const Header = {
            <ul class="flex text-white m-[20px ">
              <li class="mx-[10px] my-[10px] hover:text-black hover:underline font-bold"><a href="/">Trang Chủ</a></li>
              <li class="mx-[10px] my-[10px] hover:text-black hover:underline font-bold"><a href="/news">Chi tiết bài viết</a></li>
-             <li class="mx-[10px] my-[10px] hover:text-black hover:underline font-bold"><a href="/dashboard">dashboard</a></li>
+             <li class="mx-[10px] my-[10px] hover:text-black hover:underline font-bold"><a href="/admin/dashboard">dashboard</a></li>
              <li class="mx-[10px] my-[10px] hover:text-black hover:underline font-bold"><a href="/sign">Đăng nhập</a></li>
              <li class="mx-[10px] my-[10px] hover:text-black hover:underline font-bold"><a href="/signup">Đăng kí</a></li>
               <form action="" class="ml-[230px] mt-[10px]">

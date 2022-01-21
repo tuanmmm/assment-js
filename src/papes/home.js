@@ -4,14 +4,14 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 const HomePage = {
-    print() {
+   async print() {
         return /* html */`
             <div class="banner">
             ${Header.print()}
                 ${Banner.print()}
             </div>
             <div class="news">
-                ${NewsList.print()}
+                ${await NewsList.print()}
             </div><!--End .news-->   
             <div class="footer">
                 ${Footer.print()}
