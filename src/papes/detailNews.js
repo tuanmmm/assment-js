@@ -4,7 +4,7 @@ import axios from "axios";
 const DetailNewsPage = {
   async  print(id) {
       console.log(id)
-      const {data} = await axios.get('https://5e79b4b817314d00161333da.mockapi.io/posts/'+id);
+      const {data} = await axios.get('http://localhost:3001/posts/'+id);
         return `
         <div class="banner">
         ${Header.print()}

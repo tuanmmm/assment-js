@@ -14,6 +14,7 @@ const router = new Navigo("/" , { linksSelector: "a" });
 const render =  async (content,id) => {
 //    document.getElementById("header").innerHTML = Header.print();
     document.getElementById("app").innerHTML = await content.print(id);
+    if (content.afterRender) content.afterRender(id);
 }
 router.on({
     "/": () => render(HomePage),
